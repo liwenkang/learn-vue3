@@ -13,10 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 拉取代码
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          persist-credentials: false
+      - name: checkout
+        uses: actions/checkout@master
 
       # 生成静态文件
       - name: Build
@@ -25,7 +23,7 @@ jobs:
       # 部署到 GitHub Pages
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v2
-        with:
+        env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: /
+          FOLDER: /dist
