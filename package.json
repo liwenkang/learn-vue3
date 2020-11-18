@@ -1,6 +1,7 @@
 {
   "name": "learn-vue3",
   "version": "0.0.0",
+  "homepage": "https://liwenkang.github.io/learn-vue3",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
